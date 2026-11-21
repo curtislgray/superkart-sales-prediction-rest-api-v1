@@ -9,8 +9,8 @@ from flask import Flask, request, jsonify
 superkart_predication_api = Flask("SuperKart Sales Predictor")
 
 # Load the trained machine learning model
-model_path = "backend_files/superkart_model_v1_0.joblib"
-model = joblib.load(model_path)
+# model_path = "backend_files/superkart_model_v1_0.joblib"
+model = joblib.load("superkart_model_v1_0.joblib")
 
 # Define a route for the homepage (GET request)
 @superkart_predication_api.route("/")
