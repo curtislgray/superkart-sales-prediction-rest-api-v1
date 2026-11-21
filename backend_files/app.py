@@ -86,7 +86,7 @@ def predict_sales_batch():
     predictions = model.predict(input_data).tolist()
 
     # Calculate actual sales
-    predicted_sales = [round(float(predictions), 2) for sale in predictions]
+    predicted_sales = [round(float(sale), 2) for sale in predictions]
 
     # Create 0-based row numbers as strings
     row_nums = np.arange(len(input_data)).astype(str)
